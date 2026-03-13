@@ -10,7 +10,13 @@ function About() {
         Hi, I'm Rishalenn! I like learning, trying new things, and growing as a person.
       </p>
 
-      <p>Email: pelarijarishalenn03@gmail.com</p>
+      <p>
+        Email:{" "}
+        <a href="mailto:pelarijarishalenn03@gmail.com">
+          pelarijarishalenn03@gmail.com
+        </a>
+      </p>
+
     </Card>
   );
 }
