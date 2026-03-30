@@ -1,4 +1,4 @@
-/* Background Color */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,14 +7,14 @@ body {
 }
 
 
-/* Center layout */
+
 main, header, footer {
     max-width: 800px;
     margin: auto;
 }
 
 
-/* Section Cards */
+
 .card {
     background: white;
     padding: 20px;
@@ -25,7 +25,7 @@ main, header, footer {
 
 
 
-/* Header Style */
+
 .header-card {
     background: #a7c0d2;
     color: rgb(60, 52, 52);
@@ -33,7 +33,7 @@ main, header, footer {
 }
 
 
-/* Profile Image */
+
 .profile {
     width: 120px;
     border-radius: 50%;
@@ -43,7 +43,7 @@ main, header, footer {
 
 
 
-/* Styled Links */
+
 a {
     color: #7db2d7;
     text-decoration: none;
@@ -55,7 +55,7 @@ a:hover {
 
 
 
-/* Formatted Tables */
+
 table {
     margin: 20px auto;
     border-collapse: collapse;
@@ -74,7 +74,7 @@ h2 {
 
 
 
-/* Styled Form */
+
 form {
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@ background-color: #76b2dd;
 }
 
 
-/* Dark Mode */
+
 .dark-mode {
     background-color: #222;
     color: white;
@@ -114,7 +114,7 @@ background-color: #76b2dd;
 
 
 
-/* Hidden Section */
+
 .hidden {
     display: none;
 }
