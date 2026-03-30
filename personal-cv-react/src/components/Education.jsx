@@ -28,13 +28,13 @@ return (
 
 <tr>
 <td>Senior High School</td>
-<td>ANHS</td>
+<td>ANCHS</td>
 <td>2023</td>
 </tr>
 
 <tr>
 <td>Junior High School</td>
-<td>ANHS</td>
+<td>ANCHS</td>
 <td>2020</td>
 </tr>
 
