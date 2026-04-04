@@ -1,35 +1,49 @@
 import { useState } from "react";
+import AboutMe from "./components/About";
 import Header from "./components/Header";
-import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import "./index.css";
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const educationData = [
+    { program: "College", school: "USTP-CDO", year: "2028" },
+    { program: "Senior High School", school: "ANCHS", year: "2023" },
+    { program: "Junior High School", school: "ANCHS", year: "2020" },
+    { program: "Elementary", school: "Loguilo Elementary School", year: "2016" },
+  ];
+
+  const skillsData = ["HTML", "CSS", "JavaScript", "React"];
+
   return (
     <div className={darkMode ? "dark-mode" : ""}>
 
-      <div className="container">
+      <div className="wrapper">
 
-        <button
-          className="toggle-btn"
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+        <button className="toggle-btn" onClick={toggleDarkMode}>
+          Light/Dark Mode
         </button>
 
-        <Header />
-        <About />
-        <Skills />
-        <Education />
-        <Contact />
+        <div className="container">
+          <Header />
+          <AboutMe />
+          <Education education={educationData} />
+          <Skills skills={skillsData} />
+          <Contact />
 
-        <footer className="footer">
-          © 2026 Rishalenn Pelarija. All rights reserved.
-        </footer>
+          <footer>
+        <p>© 2026 Rishalenn Pelarija. All rights reserved.</p>
+      </footer>
+
+        </div>
 
       </div>
 
@@ -38,5 +52,3 @@ function App() {
 }
 
 export default App;
-
-// update
