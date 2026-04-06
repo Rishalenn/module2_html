@@ -1,52 +1,30 @@
 import { useState } from "react";
-import Card from "./Card";
-
 function Contact() {
-
-const [name,setName] = useState("");
-const [email,setEmail] = useState("");
-const [message,setMessage] = useState("");
-
-function handleSubmit(e){
+const [name, setName] = useState("");
+function handleSubmit(e) {
 e.preventDefault();
-alert(`Thank you ${name}!`);
+fetch("http://localhost/cv-api/process.php", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify({ name: name })
+})
+.then(res => res.json())
+.then(data => {
+alert(data.message);
+});
 }
-
 return (
-
-<div className="container">
-
-<Card title="Contact Me">
-
-<form className="contact-form" onSubmit={handleSubmit}>
-
+<form onSubmit={handleSubmit}>
 <input
 type="text"
-placeholder="Name"
 value={name}
-onChange={(e)=>setName(e.target.value)}
+onChange={(e) => setName(e.target.value)}
+placeholder="Name"
 />
-
-<input
-type="email"
-placeholder="Email"
-value={email}
-onChange={(e)=>setEmail(e.target.value)}
-/>
-
-
-<button type="submit">
-Send
-</button>
-
+<button type="submit">Send</button>
 </form>
-
-</Card>
-
-</div>
-
 );
-
 }
-
 export default Contact;
