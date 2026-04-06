@@ -202,20 +202,3 @@ button {
 }
 
 
-@media (max-width: 900px) {
-  #root {
-    width: 95%;   
-  }
-
-  table, th, td {
-    font-size: 0.9em;
-  }
-
-  h1 {
-    font-size: 1.6em;
-  }
-
-  h2 {
-    font-size: 1.2em;
-  }
-}
