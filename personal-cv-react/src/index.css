@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +8,7 @@
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
+  line-height: 1.6;
   background-color: #f5f7fa;
   color: #333;
 }
@@ -20,6 +22,7 @@ html, body {
   margin: 0 auto;
 }
 
+
 main {
   flex: 1;
 }
@@ -31,7 +34,16 @@ main {
   margin-bottom: 20px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  transition: 0.2s;
+}
+
+header.card {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.about-box {
+  border: none;
 }
 
 .card:hover {
@@ -39,23 +51,34 @@ main {
 }
 
 
-header.card {
-  text-align: center;
+.skills-content ul {
+  list-style-type: disc;
+  padding-left: 30px;
+  margin: 10px 0;
+}
+
+.skills-content li {
+  margin-bottom: 6px;
 }
 
 
 h1 {
+  text-align: center;   
   margin-bottom: 10px;
   color: #1f3a5f;
 }
 
 h2 {
-  margin: 20px 0 10px;
+  margin: 20px 0 10px 0;
   color: #1f3a5f;
+  text-align: left;     
 }
 
+
 .subtitle {
-  font-size: 1.1em;
+  text-align: center; 
+  font-weight: normal;
+  font-size: 1.2em;
   color: #1f3a5f;
 }
 
@@ -85,16 +108,12 @@ table {
 th, td {
   padding: 8px;
   border: 1px solid #ddd;
+  text-align: left;
 }
 
 th {
   background-color: #1f3a5f;
   color: white;
-}
-
-
-.skills-content ul {
-  padding-left: 20px;
 }
 
 
@@ -113,22 +132,28 @@ button:hover {
 }
 
 
-input {
+input, textarea {
   width: 100%;
   padding: 8px;
-  margin: 5px 0 10px;
+  margin: 5px 0 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 
 footer {
-  text-align: center;
-  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-top: auto;
+  padding: 10px 0;
   background-color: #f0f0f0;
+  color: #444;
+  font-size: 0.9em;
 }
 
-/* Dark Mode */
+
 .dark-mode {
   background-color: #121212;
   color: #f4f4f4;
@@ -138,17 +163,18 @@ footer {
   background: #181818;
 }
 
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode p,
-.dark-mode a,
-.dark-mode th,
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode p, 
+.dark-mode a, 
+.dark-mode th, 
 .dark-mode td {
-  color: #f4f4f4;
+  color: #f4f4f4;   
 }
 
 .dark-mode footer {
   background-color: #1e1e1e;
+  color: #f4f4f4;
 }
 
 
@@ -156,9 +182,32 @@ footer {
   display: none;
 }
 
+form {
+  position: relative;
+  z-index: 10;
+}
+
+button {
+  position: relative;
+  z-index: 10;
+}
+
+
 
 @media (max-width: 900px) {
   #root {
-    width: 95%;
+    width: 95%;   
+  }
+
+  table, th, td {
+    font-size: 0.9em;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.2em;
   }
 }

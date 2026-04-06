@@ -29,7 +29,7 @@ function App() {
       <div className="wrapper">
 
         <button className="toggle-btn" onClick={toggleDarkMode}>
-          Light/Dark Mode
+          Toggle Dark Mode
         </button>
 
         <div className="container">
@@ -40,7 +40,7 @@ function App() {
           <Contact />
 
           <footer>
-        <p>© 2026 Rishalenn Pelarija. All rights reserved.</p>
+        <p>© 2026 Rishalenn Q. Pelarija. All rights reserved.</p>
       </footer>
 
         </div>

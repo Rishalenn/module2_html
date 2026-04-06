@@ -34,11 +34,6 @@ value={email}
 onChange={(e)=>setEmail(e.target.value)}
 />
 
-<textarea
-placeholder="Message"
-value={message}
-onChange={(e)=>setMessage(e.target.value)}
-></textarea>
 
 <button type="submit">
 Send
